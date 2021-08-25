@@ -3,8 +3,9 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
+import AddIcon from "@material-ui/icons/Add";
 import Container from "@material-ui/core/Container";
+import RefreshIcon from "@material-ui/icons/Refresh";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,22 +43,24 @@ export default function App() {
       <Grid container direction="row" className={classes.grid}>
         <Grid item>
           <Button
+            size="large"
             variant="contained"
             color="secondary"
             onClick={() => setScore(0)}
             className={classes.button}
           >
-            Reset
+            <RefreshIcon />
           </Button>
         </Grid>
         <Grid item>
           <Button
+            size="large"
             variant="contained"
             color="primary"
             onClick={() => setScore(score + 1)}
             className={classes.button}
           >
-            +
+            <AddIcon />
           </Button>
         </Grid>
       </Grid>
