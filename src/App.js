@@ -5,11 +5,11 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import AddIcon from "@material-ui/icons/Add";
 import Container from "@material-ui/core/Container";
+import Box from "@material-ui/core/Box";
 import RefreshIcon from "@material-ui/icons/Refresh";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
     background: "linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%)",
     height: "100vh",
   },
@@ -22,8 +22,7 @@ const useStyles = makeStyles((theme) => ({
   grid: {
     position: "absolute",
     top: "90%",
-    left: "50%",
-    transform: "translatex(-50%)",
+    justifyContent: "center",
   },
   button: {
     marginLeft: "10vw",
@@ -36,7 +35,7 @@ export default function App() {
   const classes = useStyles();
 
   return (
-    <Container className={classes.root}>
+    <Box className={classes.root}>
       <Typography className={classes.text} variant="h1">
         {score}
       </Typography>
@@ -64,6 +63,6 @@ export default function App() {
           </Button>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 }
