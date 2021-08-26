@@ -18,15 +18,29 @@ const useStyles = makeStyles((theme) => ({
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
+    color: "white",
+    textShadow: "5px 5px 20px black",
   },
   grid: {
     position: "absolute",
-    top: "90%",
+    top: "80%",
     justifyContent: "center",
   },
-  button: {
+  reset: {
     marginLeft: "10vw",
     marginRight: "10vw",
+    color: "black",
+    background: "linear-gradient(45deg, #af0000 30%, #ef8700 90%)",
+    height: 60,
+    width: 100,
+  },
+  add: {
+    marginLeft: "10vw",
+    marginRight: "10vw",
+    color: "black",
+    background: "linear-gradient(45deg, #00a900 30%, #006453 90%)",
+    height: 60,
+    width: 100,
   },
 }));
 
@@ -46,7 +60,7 @@ export default function App() {
             variant="contained"
             color="secondary"
             onClick={() => setScore(0)}
-            className={classes.button}
+            className={classes.reset}
           >
             <RefreshIcon />
           </Button>
@@ -57,7 +71,7 @@ export default function App() {
             variant="contained"
             color="primary"
             onClick={() => setScore(score + 1)}
-            className={classes.button}
+            className={classes.add}
           >
             <AddIcon />
           </Button>
